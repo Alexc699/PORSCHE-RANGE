@@ -1,39 +1,109 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="An independent visual concept for the Porsche 911 GT3.">
-  <title>Porsche 911 GT3 — Track-bred</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{--ink:#101114;--paper:#f5f4f0;--line:#d9d8d2;--red:#d5001c;--muted:#6c6d70;--max:1200px}
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 Inter,Arial,sans-serif} a{color:inherit} img{display:block;width:100%;object-fit:cover}
-    .wrap{width:min(calc(100% - 48px),var(--max));margin:auto}.eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
-    .nav{position:absolute;inset:0 0 auto;z-index:2;color:#fff}.nav .wrap{height:84px;display:flex;align-items:center;justify-content:space-between}.brand{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:1.45rem;letter-spacing:.08em;text-decoration:none}.links{display:flex;gap:28px;align-items:center;list-style:none;margin:0;padding:0}.links a{text-decoration:none;font-size:.83rem;font-weight:600}.links a:hover{color:#fff}.nav-button{border:1px solid rgba(255,255,255,.7);padding:9px 15px}
-    .hero{min-height:760px;min-height:100svh;color:#fff;position:relative;display:grid;align-items:end;isolation:isolate;background:#151515}.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.74),rgba(0,0,0,.16) 65%),linear-gradient(0deg,rgba(0,0,0,.52),transparent 45%);z-index:-1}.hero img{position:absolute;inset:0;height:100%;z-index:-2}.hero-copy{padding:0 0 88px;max-width:680px}.hero h1,h2,h3{font-family:"Barlow Condensed",Impact,sans-serif;text-transform:uppercase;line-height:.9;margin:0}.hero h1{font-size:clamp(4.8rem,12vw,10.5rem);letter-spacing:-.03em}.hero p{max-width:48ch;margin:20px 0 30px;color:#e6e6e6}.button{display:inline-block;background:var(--red);color:#fff;text-decoration:none;padding:14px 21px;font-size:.82rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}.button:hover{background:#ee1630}
-    .numbers{background:var(--ink);color:#fff}.numbers .wrap{display:grid;grid-template-columns:repeat(4,1fr)}.stat{padding:31px 24px;border-right:1px solid #36373a}.stat:last-child{border:0}.stat strong{font-family:"Barlow Condensed",sans-serif;font-size:clamp(2.1rem,4vw,3.35rem);line-height:1;display:block}.stat span{font-size:.72rem;text-transform:uppercase;color:#aaa;letter-spacing:.08em}
-    section{padding:110px 0}.intro{display:grid;grid-template-columns:1fr 1.25fr;gap:80px;align-items:start}.intro h2,.showcase h2,.details h2,.cta h2{font-size:clamp(3.1rem,6vw,5rem)}.intro p{color:var(--muted);font-size:1.07rem;margin:0 0 16px}.intro p:first-of-type{color:var(--ink);font-size:1.35rem;line-height:1.45}
-    .showcase{background:#e8e7e2}.showcase-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:44px}.showcase-head p{max-width:39ch;color:var(--muted);margin:0}.gallery{display:grid;grid-template-columns:1.35fr .65fr;grid-template-rows:330px 330px;gap:16px}.gallery figure{margin:0;position:relative;overflow:hidden;background:#222}.gallery figure:first-child{grid-row:span 2}.gallery img{height:100%;transition:transform .5s}.gallery figure:hover img{transform:scale(1.035)}figcaption{position:absolute;bottom:0;left:0;right:0;padding:32px 20px 17px;color:#fff;font-size:.75rem;background:linear-gradient(transparent,rgba(0,0,0,.65))}
-    .details{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px}.specs{border-top:1px solid var(--line)}.spec{display:flex;justify-content:space-between;gap:28px;padding:17px 0;border-bottom:1px solid var(--line)}.spec span:first-child{font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}.spec span:last-child{font-weight:600;text-align:right}.note{margin-top:34px;padding:16px 0;border-left:3px solid var(--red);padding-left:15px;font-size:.87rem;color:var(--muted)}
-    .cta{color:#fff;background:linear-gradient(90deg,rgba(8,8,9,.85),rgba(8,8,9,.36)),url('https://images.unsplash.com/photo-1716738662381-a249fc0e9cb3?auto=format&fit=crop&fm=jpg&q=82&w=2400') center/cover;min-height:460px;display:grid;align-items:center}.cta p{max-width:47ch;color:#ddd}.disclaimer{margin-top:31px;font-size:.75rem;color:#a9a9aa;max-width:65ch}
-    footer{background:#0e0f11;color:#d2d2d2;padding:32px 0;font-size:.75rem}footer .wrap{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap}footer a{color:#fff}
-    @media(max-width:700px){.wrap{width:min(calc(100% - 40px),var(--max))}.nav .wrap{height:68px}.links{display:none}.hero{min-height:660px}.hero-copy{padding-bottom:56px}.numbers .wrap{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:0}.stat{padding:24px 14px}.intro,.details{grid-template-columns:1fr;gap:36px}section{padding:72px 0}.showcase-head{display:block}.showcase-head p{margin-top:16px}.gallery{grid-template-columns:1fr;grid-template-rows:300px 210px 210px}.gallery figure:first-child{grid-row:auto}.cta{min-height:520px}}
-  </style>
-</head>
-<body>
-  <nav class="nav" aria-label="Main navigation"><div class="wrap"><a class="brand" href="#top">PORSCHE 911 GT3</a><ul class="links"><li><a href="#story">The car</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#specs">Specifications</a></li><li><a class="nav-button" href="#enquire">Enquire</a></li></ul></div></nav>
-  <main>
-    <header class="hero" id="top"><img src="https://images.unsplash.com/photo-1564694457220-0efef1a70d6d?auto=format&fit=crop&fm=jpg&q=85&w=2400" alt="Blue Porsche 911 GT3" fetchpriority="high"><div class="wrap hero-copy"><div class="eyebrow">Independent visual concept</div><h1>911<br>GT3</h1><p>A naturally aspirated, track-focused sports car designed for drivers who measure every corner.</p><a class="button" href="#story">Explore the GT3</a></div></header>
-    <section class="numbers" aria-label="Performance highlights"><div class="wrap"><div class="stat"><strong>510 PS</strong><span>Maximum power</span></div><div class="stat"><strong>3.4 s</strong><span>0–100 km/h</span></div><div class="stat"><strong>320 km/h</strong><span>Top track speed</span></div><div class="stat"><strong>4.0 L</strong><span>Flat-six engine</span></div></div></section>
-    <section id="story"><div class="wrap intro"><div><div class="eyebrow">The car</div><h2>Built for the apex.</h2></div><div><p>The 911 GT3 turns racing knowledge into a road car with a high-revving naturally aspirated engine, motorsport-bred aerodynamics and purposeful weight reduction.</p><p>This page shifts the focus from an imaginary showroom to the material, motion and details that make a real GT3 compelling.</p></div></div></section>
-    <section class="showcase" id="gallery"><div class="wrap"><div class="showcase-head"><div><div class="eyebrow">Visual story</div><h2>Made to move.</h2></div><p>Use photography in large, confident panels. One hero moment, then close details that make the engineering feel tangible.</p></div><div class="gallery"><figure><img src="https://images.unsplash.com/photo-1716738662381-a249fc0e9cb3?auto=format&fit=crop&fm=jpg&q=82&w=1800" alt="Porsche 911 GT3 driving on a race track" loading="lazy"><figcaption>Track capability</figcaption></figure><figure><img src="https://images.unsplash.com/photo-1721909402926-d6637339fb46?auto=format&fit=crop&fm=jpg&q=82&w=1200" alt="Close detail of Porsche 911 GT3 wheel" loading="lazy"><figcaption>Wheel and brake detail</figcaption></figure><figure><img src="https://images.unsplash.com/photo-1564694457220-0efef1a70d6d?auto=format&fit=crop&fm=jpg&q=82&w=1200" alt="Blue Porsche 911 GT3 side profile" loading="lazy"><figcaption>Iconic silhouette</figcaption></figure></div></div></section>
-    <section id="specs"><div class="wrap details"><div><div class="eyebrow">Specification</div><h2>Every figure has purpose.</h2><p class="note">Figures shown are indicative 911 GT3 specifications. Verify trim- and market-specific details with Porsche.</p></div><div class="specs"><div class="spec"><span>Engine</span><span>4.0-litre naturally aspirated flat-six</span></div><div class="spec"><span>Power</span><span>510 PS</span></div><div class="spec"><span>Transmission</span><span>7-speed PDK</span></div><div class="spec"><span>0–100 km/h</span><span>3.4 seconds</span></div><div class="spec"><span>Top speed</span><span>320 km/h</span></div><div class="spec"><span>Drive</span><span>Rear-wheel drive</span></div></div></div></section>
-    <section class="cta" id="enquire"><div class="wrap"><div class="eyebrow">Drive with intent</div><h2>See the road<br>differently.</h2><p>A clean final call-to-action keeps the page focused: one clear next step after the car, its performance and its visual story.</p><a class="button" href="mailto:hello@example.com?subject=911%20GT3%20enquiry">Send an enquiry</a><p class="disclaimer">Unofficial independent portfolio concept. Porsche, the Porsche crest and 911 GT3 are trademarks of Dr. Ing. h.c. F. Porsche AG. This site is not affiliated with, endorsed by or sponsored by Porsche.</p></div></section>
-  </main>
-  <footer><div class="wrap"><span>Photography: <a href="https://unsplash.com/photos/blue-luxury-car-bDka494APVA">Teddy O</a>, <a href="https://unsplash.com/photos/a-black-sports-car-driving-down-a-race-track-V2Gs2mZzK5c">Nejc Soklič</a> and <a href="https://unsplash.com/photos/a-close-up-of-a-tire-on-a-sports-car-rYYfq0B1zWQ">Tiago Ferreira</a> via Unsplash.</span><a href="#top">Back to top ↑</a></div></footer>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="An independent Porsche model range concept."
+    />
+    <title>Porsche Range — Independent Concept</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container navigation">
+        <a class="wordmark" href="#top">PORSCHE <span>RANGE</span></a>
+        <a class="header-link" href="#models">Explore models</a>
+      </div>
+    </header>
+    <main id="top">
+      <section class="hero" aria-labelledby="model-name">
+        <img id="hero-image" class="hero-image" src="" alt="" />
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <p class="eyebrow" id="model-category"></p>
+          <h1 id="model-name"></h1>
+          <p class="hero-copy" id="model-description"></p>
+          <a class="button" href="#specifications">View specifications</a>
+        </div>
+      </section>
+      <section class="model-picker" id="models" aria-labelledby="models-title">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">The range</p>
+              <h2 id="models-title">Choose your drive.</h2>
+            </div>
+            <p>
+              Each tab updates the image, story and key figures without leaving
+              the page.
+            </p>
+          </div>
+          <div
+            id="model-tabs"
+            class="model-tabs"
+            role="tablist"
+            aria-label="Porsche models"
+          ></div>
+        </div>
+      </section>
+      <section class="performance" aria-label="Performance highlights">
+        <div class="container stat-grid">
+          <article class="stat">
+            <strong id="power-value"></strong><span>Maximum power</span>
+          </article>
+          <article class="stat">
+            <strong id="acceleration-value"></strong><span>0–100 km/h</span>
+          </article>
+          <article class="stat">
+            <strong id="speed-value"></strong><span>Top speed</span>
+          </article>
+          <article class="stat">
+            <strong id="engine-value"></strong><span>Powertrain</span>
+          </article>
+        </div>
+      </section>
+      <section class="details" id="specifications">
+        <div class="container detail-grid">
+          <div>
+            <p class="eyebrow">Designed with intent</p>
+            <h2 id="detail-title"></h2>
+            <p id="detail-copy" class="detail-copy"></p>
+          </div>
+          <dl id="spec-list" class="spec-list"></dl>
+        </div>
+      </section>
+      <section class="disclaimer-section">
+        <div class="container">
+          <p>
+            <strong>Independent portfolio concept.</strong> Porsche and all
+            model names are trademarks of Dr. Ing. h.c. F. Porsche AG. This site
+            is not affiliated with, endorsed by or sponsored by Porsche.
+          </p>
+          <p>
+            Photographs are shown with credit and link to their Unsplash source.
+            Specifications are indicative; verify current market figures with
+            Porsche.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container footer-content">
+        <span>PORSCHE RANGE — independent visual concept</span
+        ><a id="photo-credit" href="" target="_blank" rel="noreferrer"
+          >Photo source</a
+        >
+      </div>
+    </footer>
+    <script src="assets/js/models.js"></script>
+  </body>
 </html>
 
