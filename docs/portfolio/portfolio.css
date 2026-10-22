@@ -128,39 +128,40 @@ footer a {
 .project-card {
   display: block;
   padding-top: 20px;
+  color: inherit;
   text-decoration: none;
 }
-.project-image {
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 16 / 8.5;
+.project-index {
+  display: flex;
+  min-height: 350px;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 24px;
   background: #252525;
+  border: 1px solid #444;
 }
-.project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-.project-card:hover img {
-  transform: scale(1.035);
-}
-.view-project {
-  position: absolute;
-  right: 18px;
-  bottom: 18px;
-  padding: 10px 14px;
-  background: var(--lime);
-  color: var(--ink);
+.project-index span:first-child {
+  color: var(--lime);
   font:
-    500 0.72rem "DM Mono",
+    500 clamp(5rem, 14vw, 12rem) / 0.7 "DM Mono",
     monospace;
+  letter-spacing: -0.15em;
+}
+.project-index span:last-child {
+  color: #b4b0a8;
+  font:
+    0.72rem "DM Mono",
+    monospace;
+  text-transform: uppercase;
+}
+.project-card:hover .project-index {
+  background: #303030;
 }
 .project-meta {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  padding: 18px 0 0;
+  padding: 18px 0 12px;
 }
 .project-meta h2 {
   margin: 0 0 5px;
@@ -171,6 +172,15 @@ footer a {
   margin: 0;
   color: #b4b0a8;
   font-size: 0.82rem;
+}
+.text-link {
+  display: inline-block;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--lime);
+  color: var(--lime);
+  font:
+    0.72rem "DM Mono",
+    monospace;
 }
 
 .about {
